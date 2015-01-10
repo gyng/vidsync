@@ -1,0 +1,40 @@
+html, body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.video-tile-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 32.9vw;
+    height: 48vh;
+    float: left;
+    overflow: hidden;
+}
+
+.video-tile {
+    height: 100%;
+    object-fit: cover;
+}
+
+#controls {
+    position: absolute;
+    width: 90%;
+    padding: 0 5%;
+    bottom: 0;
+    float: left;
+}
+
+#bpm {
+    width: calc(100% - 125px);
+}
+
+#bpm-display {
+    color: #BBB;
+    width: 120px;
+    font-size: 22px;
+    text-align: center;
+    font-family: sans-serif;
+}
