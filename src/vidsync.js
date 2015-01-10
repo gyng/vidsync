@@ -4,12 +4,12 @@ window.VidSync = (function () {
     "use strict";
 
     function VidSync(selector, bpm, beatsPerLoop) {
+        var localBeatsPerLoop = beatsPerLoop || 4;
         this.bpm = bpm || 140;
-        this.beatsPerLoop = beatsPerLoop || 4;
         this.selector = selector;
         this.tiles = [];
         this.timer = null;
-        this.attachVideos(this.selector, beatsPerLoop);
+        this.attachVideos(this.selector, localBeatsPerLoop);
     }
 
     function VidSyncTile(video, beatsPerLoop) {
@@ -39,7 +39,7 @@ window.VidSync = (function () {
 
         for (i = 0; i < this.tiles.length; i += 1) {
             tile = this.tiles[i];
-            newVidDuration = this.beatsPerLoop * secondsPerBeat;
+            newVidDuration = tile.beatsPerLoop * secondsPerBeat;
             scaleFactor = tile.video.duration / newVidDuration;
             tile.video.playbackRate = scaleFactor;
         }
