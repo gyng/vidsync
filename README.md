@@ -13,3 +13,5 @@ Tiny JavaScript library to synchronize `<video>` elements to a common BPM.
     ```
 3. All videos with the class `.video-element-selector` will be synchronized to the desired BPM.
 4. For an example application, check out `examples/tiles/index.html`.
+
+NB. Due to browser limitations, too high or low a playback rate might not work as intended.
