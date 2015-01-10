@@ -13,7 +13,6 @@
         bpmRange.value = vidsync.bpm;
 
         bpmRange.onchange = function (e) {
-            console.log(e.target.value)
             vidsync.bpm = e.target.value;
             audio.playbackRate = (vidsync.bpm) / audioBaseBpm;
             bpmDisplay.innerHTML = vidsync.bpm + " bpm";
